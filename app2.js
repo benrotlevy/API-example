@@ -5,6 +5,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("hello world");
+});
+
 app.use("/api/users", usersRoute);
 // app.use("/api/products", productsRoute);
 
